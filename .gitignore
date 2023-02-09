@@ -1,0 +1,12 @@
+# PyCharm project files
+.idea/
+
+# PyInstaller build artifacts
+dist/
+build/
+*.spec
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo

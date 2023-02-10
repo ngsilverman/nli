@@ -1,5 +1,7 @@
 # Natural Language Interface (NLI)
 
+NLI is a tool that converts natural language into shell commands. With NLI, you can express your desired actions in plain language, and the tool will generate the corresponding shell commands for you. This approach can make it quicker and easier to execute tasks in the terminal, especially when compared to manual command typing. NLI is powered by GPT-3, a state-of-the-art language model developed by OpenAI.
+
 ## Installation
 
 If you're using a Mac with an arm64 processor you can download the executable directly from [releases](https://github.com/ngsilverman/nli/releases).

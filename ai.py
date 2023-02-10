@@ -3,7 +3,7 @@ import openai
 from generators import lstrip
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
-shell = os.path.basename(os.getenv('SHELL'))
+shell = os.path.basename(os.getenv('SHELL', '/bin/sh'))
 
 model = 'text-davinci-003'
 max_tokens = 4000

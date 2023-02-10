@@ -1,8 +1,14 @@
 import ai
-import os
+import subprocess
 import sys
 from console import console
 from rich.prompt import Prompt
+from shell import shell
+
+
+def run(cmd):
+    subprocess.run(cmd, shell=True, executable=shell)
+
 
 if __name__ == '__main__':
     request = " ".join(sys.argv[1:])
@@ -15,7 +21,7 @@ if __name__ == '__main__':
     response = Prompt.ask('Run, explain or abort?', choices=['r', 'e', 'a'], default='r')
     if response == 'r':
         console.line()
-        os.system(command)
+        run(command)
     elif response == 'e':
         console.line()
         for comp in ai.explain_command(command):
@@ -24,4 +30,4 @@ if __name__ == '__main__':
         response = Prompt.ask('Run or abort?', choices=['r', 'a'], default='r')
         if response == 'r':
             console.line()
-            os.system(command)
+            run(command)

@@ -18,7 +18,7 @@ if __name__ == '__main__':
         command += comp
         console.print(comp, end='', style='bold')
     console.line(2)
-    response = Prompt.ask('Run, explain or abort?', choices=['r', 'e', 'a'], default='r')
+    response = Prompt.ask('Run, explain or abort?', choices=['r', 'e', 'a'], default='a')
     if response == 'r':
         console.line()
         run(command)
@@ -27,7 +27,7 @@ if __name__ == '__main__':
         for comp in ai.explain_command(command):
             console.print(comp, end='', style='italic')
         console.line(2)
-        response = Prompt.ask('Run or abort?', choices=['r', 'a'], default='r')
+        response = Prompt.ask('Run or abort?', choices=['r', 'a'], default='a')
         if response == 'r':
             console.line()
             run(command)
